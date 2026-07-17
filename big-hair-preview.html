@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Hair — Protective Styles & Braids</title>
+<meta name="description" content="Big Hair salon — braids, braidals, microtwist extensions and afro twists at affordable Kenyan prices. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#151A2E;
+    --navy:#1B2A55;
+    --navy-2:#0F1A38;
+    --pink:#D6296B;
+    --pink-2:#B8175A;
+    --cream:#FBF7F5;
+    --cream-2:#F3E7EC;
+    --line: rgba(21,26,46,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3, .display{ font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  @media(min-width:640px){ .wrap{padding:0 40px;} }
+
+  .status-strip{ background:var(--navy-2); color:var(--cream); font-size:13px; padding:9px 0; }
+  .status-strip .wrap{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+  .status-dot{ display:inline-block; width:7px; height:7px; border-radius:50%; background:#67C58A; margin-right:7px; box-shadow:0 0 0 3px rgba(103,197,138,0.25); }
+  .status-dot.closed{ background:#D9683C; box-shadow:0 0 0 3px rgba(217,104,60,0.22); }
+  .status-strip a{ border-bottom:1px solid rgba(251,247,245,0.4); }
+
+  header{ padding:20px 0 8px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:40px; height:40px; border-radius:9px;
+    background:linear-gradient(155deg, var(--pink), var(--pink-2));
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-family:'Fraunces', serif; font-weight:600; font-size:18px;
+  }
+  .brand-name{font-family:'Fraunces', serif; font-weight:600; font-size:19px;}
+  .brand-name span{display:block; font-family:'Manrope',sans-serif; font-weight:600; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink-2); margin-top:1px;}
+  nav.links{display:none; gap:28px; font-size:14px; font-weight:600;}
+  @media(min-width:800px){ nav.links{display:flex;} }
+  .nav-cta{ background:var(--navy); color:#fff; padding:10px 18px; border-radius:30px; font-size:13.5px; font-weight:700; display:inline-flex; align-items:center; gap:7px; }
+
+  .hero{padding:52px 0 60px; display:grid; gap:36px;}
+  @media(min-width:880px){ .hero{grid-template-columns:1.1fr 0.9fr; align-items:center; padding:72px 0 84px;} }
+  .eyebrow{ font-size:12.5px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--pink-2); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+  .eyebrow::before{content:''; width:20px; height:2px; background:var(--navy); display:inline-block;}
+  .hero h1{ font-size:clamp(34px, 6vw, 56px); line-height:1.04; }
+  .hero h1 em{ font-style:italic; color:var(--pink); }
+  .hero p.lede{ margin-top:18px; font-size:17px; color:#4C4A5A; max-width:46ch; }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px;}
+  .btn{ display:inline-flex; align-items:center; gap:8px; padding:14px 24px; border-radius:30px; font-weight:700; font-size:14.5px; border:1.5px solid transparent; cursor:pointer; }
+  .btn-primary{ background:var(--pink); color:#fff; }
+  .btn-primary:hover{ background:var(--pink-2); }
+  .btn-ghost{ border-color:var(--navy); color:var(--navy); }
+  .btn-ghost:hover{ background:rgba(27,42,85,0.06); }
+  .hero-proof{display:flex; gap:22px; margin-top:34px; flex-wrap:wrap;}
+  .proof-item{font-size:13px; color:#4C4A5A;}
+  .proof-item b{ display:block; font-family:'Fraunces', serif; font-size:22px; color:var(--navy); font-weight:600; }
+
+  .hero-visual{ position:relative; border-radius:22px; overflow:hidden; aspect-ratio:4/5; background:linear-gradient(160deg, var(--cream-2), #E7C9D6); }
+  .hero-visual img{ width:100%; height:100%; object-fit:cover; }
+  .hero-badge{ position:absolute; left:16px; bottom:16px; right:16px; background:rgba(251,247,245,0.94); backdrop-filter:blur(6px); border-radius:14px; padding:14px 16px; display:flex; align-items:center; gap:12px; box-shadow:0 8px 24px rgba(21,26,46,0.14); }
+  .stars{color:var(--pink); font-size:15px; letter-spacing:1px;}
+
+  .fixbar{ background:var(--navy); color:var(--cream); padding:48px 0; }
+  .fixbar-head{ max-width:60ch; margin-bottom:32px; }
+  .fixbar-head .eyebrow{ color:#F5A8C6; }
+  .fixbar-head .eyebrow::before{ background:var(--cream); }
+  .fixbar-head h2{ font-size:clamp(24px,4vw,32px); color:var(--cream); }
+  .fixbar-head p{ color:rgba(251,247,245,0.72); margin-top:10px; font-size:15px; }
+  .fixgrid{ display:grid; gap:18px; grid-template-columns:1fr; }
+  @media(min-width:760px){ .fixgrid{ grid-template-columns:repeat(3,1fr); } }
+  .fixcard{ background:rgba(251,247,245,0.06); border:1px solid rgba(251,247,245,0.14); border-radius:16px; padding:22px; }
+  .fixcard .tag{ font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#F5A8C6; }
+  .fixcard h3{ font-size:17px; color:var(--cream); margin:10px 0 8px; font-weight:600; }
+  .fixcard p{ font-size:14px; color:rgba(251,247,245,0.72); }
+
+  section{ padding:64px 0; }
+  .section-head{ max-width:56ch; margin-bottom:36px; }
+  .section-head h2{ font-size:clamp(26px,4vw,34px); }
+  .section-head p{ color:#4C4A5A; margin-top:10px; font-size:15.5px; }
+
+  .service-list{ display:grid; gap:0; border-top:1px solid var(--line); }
+  .service-row{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:20px 0; border-bottom:1px solid var(--line); }
+  .service-row .name{ font-weight:700; font-size:16px; }
+  .service-row .desc{ font-size:13.5px; color:#4C4A5A; margin-top:4px; }
+  .service-row .price{ font-family:'Fraunces', serif; font-weight:600; font-size:18px; white-space:nowrap; color:var(--pink-2); }
+  .price-note{ font-size:12.5px; color:#8A8698; margin-top:14px; }
+
+  .gallery{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  @media(min-width:700px){ .gallery{ grid-template-columns:repeat(4,1fr); } }
+  .gallery div{ border-radius:14px; overflow:hidden; aspect-ratio:1; position:relative; }
+  .gallery img{ width:100%; height:100%; object-fit:cover; transition:transform .4s ease; }
+  .gallery div:hover img{ transform:scale(1.06); }
+  .gallery .cap{ position:absolute; left:8px; bottom:8px; background:rgba(21,26,46,0.65); color:#fff; font-size:11px; padding:4px 8px; border-radius:6px; }
+
+  .testi{ background:var(--cream-2); border-radius:20px; padding:36px 28px; }
+  .testi p{ font-family:'Fraunces', serif; font-size:clamp(19px,2.6vw,24px); font-weight:500; line-height:1.4; max-width:64ch; }
+  .testi .who{ margin-top:18px; font-size:13.5px; color:#4C4A5A; font-weight:600; }
+
+  .loc-grid{ display:grid; gap:28px; }
+  @media(min-width:820px){ .loc-grid{ grid-template-columns:1fr 1fr; } }
+  .hours-table{ width:100%; border-collapse:collapse; margin-top:16px; }
+  .hours-table tr{ border-bottom:1px solid var(--line); }
+  .hours-table td{ padding:11px 0; font-size:14.5px; }
+  .hours-table td:last-child{ text-align:right; font-weight:700; }
+  .hours-table tr.today td{ color:var(--pink-2); font-weight:700; }
+  .map-box{ border-radius:18px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; }
+  .map-box iframe{ width:100%; height:100%; border:0; }
+
+  footer{ background:var(--navy-2); color:var(--cream); padding:52px 0 100px; }
+  .foot-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:32px; }
+  footer h3{ color:var(--cream); font-size:20px; margin-bottom:10px; }
+  footer p{ color:rgba(251,247,245,0.65); font-size:14px; max-width:34ch; }
+  .foot-links{ display:flex; gap:22px; font-size:13.5px; font-weight:600; flex-wrap:wrap; }
+  .foot-links a{ color:rgba(251,247,245,0.85); }
+  .foot-bottom{ margin-top:40px; padding-top:20px; border-top:1px solid rgba(251,247,245,0.12); font-size:12.5px; color:rgba(251,247,245,0.5); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
+
+  .sticky-book{ position:fixed; left:0; right:0; bottom:0; z-index:40; background:var(--pink); color:#fff; padding:12px 18px; display:flex; align-items:center; justify-content:space-between; box-shadow:0 -6px 20px rgba(21,26,46,0.2); }
+  .sticky-book .txt{ font-size:13px; }
+  .sticky-book .txt b{ display:block; font-family:'Fraunces', serif; font-size:15.5px; font-weight:600; }
+  .sticky-book .btn-primary{ background:var(--navy); color:#fff; padding:11px 20px; }
+  @media(min-width:800px){ .sticky-book{ display:none; } }
+  body{ padding-bottom:74px; }
+  @media(min-width:800px){ body{ padding-bottom:0; } }
+
+  .preview-flag{
+    background:#FFF3E2; border-bottom:1px solid #F0D9B0; color:#7A5A20;
+    font-size:12.5px; text-align:center; padding:8px 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-flag">👋 This is a personalized preview for Big Hair — nothing is live yet. Photos, hours and prices below are placeholders to swap for the real ones.</div>
+
+<div class="status-strip">
+  <div class="wrap">
+    <span><span class="status-dot" id="statusDot"></span><span id="statusText">Checking today's hours…</span></span>
+    <a href="#location">Get directions →</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="brand-mark">B</div>
+      <div class="brand-name">Big Hair<span>Protective Styles &amp; Braids</span></div>
+    </div>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Hours &amp; location</a>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/254725563612?text=Hi%20Big%20Hair%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">
+      Book on WhatsApp
+    </a>
+  </header>
+
+  <section class="hero" style="padding-top:40px;">
+    <div>
+      <div class="eyebrow">Protective styles · braids · extensions</div>
+      <h1>Big styles.<br><em>Bigger confidence.</em></h1>
+      <p class="lede">Braids, braidals, microtwist extensions and afro twists — done properly, at prices that make sense. Book straight on WhatsApp, no waiting on a DM reply.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://wa.me/254725563612?text=Hi%20Big%20Hair%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">
+          Book on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#services">See services &amp; prices</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><b>4.8★</b>Google rating</div>
+        <div class="proof-item"><b>4+</b>style categories</div>
+        <div class="proof-item"><b>Owns</b>the site, fully</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop" alt="Braided protective style">
+      <div class="hero-badge">
+        <div class="stars">★★★★★</div>
+        <div style="font-size:13px; color:#4C4A5A;">"Booked on WhatsApp, done exactly on time" — placeholder review</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="fixbar">
+  <div class="wrap">
+    <div class="fixbar-head">
+      <div class="eyebrow">Built around your one concern</div>
+      <h2>What happens if Big Hair relocates</h2>
+      <p>This page is content you own — not tied to one address. Moving locations just means updating a few lines. No rebuild, no losing your Google reviews or WhatsApp link.</p>
+    </div>
+    <div class="fixgrid">
+      <div class="fixcard">
+        <div class="tag">Fixed</div>
+        <h3>Location updates in minutes</h3>
+        <p>Change the map, address and directions text yourself — or I update it for free as part of the handover.</p>
+      </div>
+      <div class="fixcard">
+        <div class="tag">Fixed</div>
+        <h3>You own it outright</h3>
+        <p>The site isn't rented from a platform. It moves with the business, wherever Big Hair sets up next.</p>
+      </div>
+      <div class="fixcard">
+        <div class="tag">Fixed</div>
+        <h3>Booking never breaks</h3>
+        <p>WhatsApp number stays the same regardless of address, so clients can always reach you mid-move.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="services">
+    <div class="section-head">
+      <h2>Services &amp; prices</h2>
+      <p>Starting prices below — final pricing to confirm with you, then locked in so clients know exactly what to expect.</p>
+    </div>
+    <div class="service-list">
+      <div class="service-row">
+        <div><div class="name">Knotless / box braids</div><div class="desc">Full head, protective style</div></div>
+        <div class="price">From KES 2,500</div>
+      </div>
+      <div class="service-row">
+        <div><div class="name">Braidals</div><div class="desc">Bridal braid styling, includes consultation</div></div>
+        <div class="price">From KES 5,000</div>
+      </div>
+      <div class="service-row">
+        <div><div class="name">Microtwist extensions</div><div class="desc">Full head, natural finish</div></div>
+        <div class="price">From KES 3,000</div>
+      </div>
+      <div class="service-row">
+        <div><div class="name">Afro twists</div><div class="desc">Two-strand or Senegalese twist</div></div>
+        <div class="price">From KES 2,200</div>
+      </div>
+    </div>
+    <p class="price-note">Placeholder prices — send your real list and I'll swap these in before we go live.</p>
+  </section>
+
+  <section id="gallery">
+    <div class="section-head">
+      <h2>Recent work</h2>
+      <p>Placeholder photos for now — swap in your own client photos anytime.</p>
+    </div>
+    <div class="gallery">
+      <div><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=500&auto=format&fit=crop" alt="Braided style"><span class="cap">Braids</span></div>
+      <div><img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?q=80&w=500&auto=format&fit=crop" alt="Bridal braid styling"><span class="cap">Braidal</span></div>
+      <div><img src="https://images.unsplash.com/photo-1522336284037-91f7da073525?q=80&w=500&auto=format&fit=crop" alt="Microtwist extensions"><span class="cap">Microtwist</span></div>
+      <div><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=500&auto=format&fit=crop" alt="Afro twist style"><span class="cap">Afro twist</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="testi">
+      <p>"Big Hair does the styles nobody else in the area gets right — this just makes it easier to book them."</p>
+      <div class="who">— placeholder testimonial, swap for a real one</div>
+    </div>
+  </section>
+
+  <section id="location">
+    <div class="section-head">
+      <h2>Hours &amp; location</h2>
+      <p>Placeholder hours below — send your real schedule and I'll lock these in.</p>
+    </div>
+    <div class="loc-grid">
+      <div>
+        <table class="hours-table" id="hoursTable">
+          <tr data-day="1"><td>Monday</td><td>9:00 – 18:00</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>9:00 – 18:00</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>9:00 – 18:00</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>9:00 – 18:00</td></tr>
+          <tr data-day="5"><td>Friday</td><td>9:00 – 19:00</td></tr>
+          <tr data-day="6"><td>Saturday</td><td>8:00 – 19:00</td></tr>
+          <tr data-day="0"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <a class="btn btn-primary" style="margin-top:20px;" href="https://wa.me/254725563612?text=Hi%20Big%20Hair%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">Book on WhatsApp</a>
+      </div>
+      <div class="map-box">
+        <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8180017469213!2d36.8225981776687!3d-1.2830373987047656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f117b5616b4c9%3A0x74dbdcd1a96435c3!2sBig%20Hair%20We_Care!5e0!3m2!1sen!2ske!4v1784269418015!5m2!1sen!2ske" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Big Hair</h3>
+        <p>Protective styles, braids, braidals, microtwist extensions and afro twists — booked directly on WhatsApp.</p>
+      </div>
+      <div class="foot-links">
+        <a href="https://wa.me/254725563612" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="tel:+254725563612">Call</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Big Hair</span>
+      <span>Preview by Justin — customize freely, nothing is final</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-book">
+  <div class="txt">Book your slot<b id="stickyStatus">Open now</b></div>
+  <a class="btn btn-primary" href="https://wa.me/254725563612?text=Hi%20Big%20Hair%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+  const hours = {
+    1: [9, 18],
+    2: [9, 18],
+    3: [9, 18],
+    4: [9, 18],
+    5: [9, 19],
+    6: [8, 19],
+    0: null
+  };
+  function updateStatus(){
+    const now = new Date();
+    const day = now.getDay();
+    const h = now.getHours() + now.getMinutes()/60;
+    const today = hours[day];
+    const dot = document.getElementById('statusDot');
+    const text = document.getElementById('statusText');
+    const sticky = document.getElementById('stickyStatus');
+    let open = false, msg = '';
+
+    if(today && h >= today[0] && h < today[1]){
+      open = true;
+      msg = `Open now · closes ${String(today[1]).padStart(2,'0')}:00`;
+    } else if(today && h < today[0]){
+      msg = `Closed · opens ${String(today[0]).padStart(2,'0')}:00 today`;
+    } else {
+      msg = 'Closed today · message us to book ahead';
+    }
+
+    text.textContent = msg;
+    dot.className = 'status-dot' + (open ? '' : ' closed');
+    sticky.textContent = open ? 'Open now' : 'Message to book';
+
+    document.querySelectorAll('#hoursTable tr').forEach(row=>{
+      row.classList.toggle('today', Number(row.dataset.day) === day);
+    });
+  }
+  updateStatus();
+  setInterval(updateStatus, 60000);
+</script>
+
+</body>
+</html>
